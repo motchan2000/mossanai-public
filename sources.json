@@ -1,0 +1,41 @@
+{
+  "_comment": "Gitで管理しない外部データの取得元。この版に固定することで、いつでも同じ環境を再現できる。",
+  "base_model": {
+    "repo": "Qwen/Qwen2.5-Coder-1.5B",
+    "revision": "df3ce67c0e24480f20468b6ef2894622d69eb73b",
+    "license": "Apache-2.0",
+    "local_dir": "models/base/Qwen2.5-Coder-1.5B"
+  },
+  "base_model_7b": {
+    "_comment": "CLI 生成用（v4, QLoRA）",
+    "repo": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "license": "Apache-2.0",
+    "local_dir": "models/base/Qwen2.5-Coder-7B-Instruct"
+  },
+  "bedrock_samples": {
+    "repo": "https://github.com/Mojang/bedrock-samples.git",
+    "tag": "v1.26.50.4",
+    "commit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+    "local_dir": "data/bedrock/raw/bedrock-samples-v1.26.50.4"
+  },
+  "bds": {
+    "_comment": "スクリプトの実行テスト用 Bedrock Dedicated Server（Windows）。ダウンロード時に Minecraft EULA / プライバシーポリシーへの同意が必要（2026-10-02 ユーザーが同意）。",
+    "version": "1.26.52.3",
+    "url": "https://www.minecraft.net/bedrockdedicatedserver/bin-win/bedrock-server-1.26.52.3.zip",
+    "local_dir": "tools/bds/1.26.52.3"
+  },
+  "llama_cpp": {
+    "_comment": "GGUF変換用（convert_hf_to_gguf.py, conversion/, gguf-py/ のみ sparse-checkout）。uv pip install -e tools/llama.cpp/gguf-py sentencepiece",
+    "repo": "https://github.com/ggml-org/llama.cpp",
+    "commit": "0c1e57098bba43ac29e6e3b677cdceebdd22334f",
+    "local_dir": "tools/llama.cpp"
+  },
+  "llama_bin": {
+    "_comment": "7B の GGUF を 4bit（Q4_K_M）に量子化する llama-quantize.exe（CPU 版で十分）",
+    "repo": "https://github.com/ggml-org/llama.cpp",
+    "release": "b11344",
+    "asset": "llama-b11344-bin-win-cpu-x64.zip",
+    "local_dir": "tools/llama-bin"
+  }
+}

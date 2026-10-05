@@ -1,0 +1,12 @@
+{
+  "name": "mossanai-script-check",
+  "private": true,
+  "description": "Script API（@minecraft/server）のJS/TSを公式型定義で型チェックする。bedrock_tools/script_check.py から使う。",
+  "devDependencies": {
+    "@minecraft/server": "2.10.0",
+    "@minecraft/server-ui": "2.2.0",
+    "@minecraft/common": "1.3.0",
+    "@minecraft/vanilla-data": "1.26.52",
+    "typescript": "5.9.3"
+  }
+}

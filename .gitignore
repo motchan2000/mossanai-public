@@ -1,0 +1,35 @@
+# Python / 環境
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 外部から取得するもの（sources.json の版で再取得できる）
+models/base/
+data/bedrock/raw/
+tools/
+script_check/node_modules/
+script_check/work/
+
+# 再生成できる中間生成物
+models/merged/
+data/bedrock/corpus/
+data/bedrock/tokenizer/
+data/bedrock/*.bin
+data/bedrock/tokenizer.json
+data/bedrock/meta.json
+data/shakespeare_char/input.txt
+data/shakespeare_char/*.bin
+data/shakespeare_char/meta.json
+data/**/_tmp*/
+
+# 学習・評価の出力（評価結果のまとめだけは残す）
+out/*
+!out/eval/
+out/eval/*
+!out/eval/*.summary.json
+*.log
+*.err
+
+# 生成したアドオン（必要なら個別に追加）
+packs/
